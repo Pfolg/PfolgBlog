@@ -101,3 +101,115 @@ Categories=ConsoleOnly;System;
 最后呢，咱们的电脑也是成功的关上了……
 
 一波三折，学到了很多，又真是自我感动的一天呐！
+
+
+# 补 2025-2-6
+
+最新写的带有图形界面的程序
+
+~~~python
+# -*- coding: UTF-8 -*-
+"""
+@Project ：Python_projects 
+@File    ：autoShutdownPro
+@IDE     ：PyCharm 
+@Author  ：pfolg
+@Date    ：2/6/25 2:19 PM 
+"""
+import os
+import tkinter as tk
+from tkinter import ttk,messagebox
+import time
+import threading
+
+commands={
+    "Windows":"shutdown /s /t 0",
+    "Linux":"poweroff",
+    "MacOs":"shutdown -h now"
+}
+
+
+class A:
+    def __init__(self,name):
+        # 赋值
+        self.root=tk.Tk()
+        self.name=name
+        self.system=tk.StringVar()
+        self.frame=ttk.Frame(self.root)
+        self.countdown=None
+
+        self.isstart=False
+        self.day,self.hour,self.min,self.sec=tk.IntVar(),tk.IntVar(),tk.IntVar(),tk.IntVar()
+
+        # 设定函数
+        self.set_win()
+        self.set_frame()
+
+        # 运行
+        self.root.mainloop()
+
+    def set_win(self):
+        self.root.title(self.name)
+        sw,sh=self.root.winfo_screenwidth(),self.root.winfo_screenheight()
+        self.root.geometry("{}x{}+{}+{}".format(int(sw/4),int(sh/4),int(sw/4),int(sh/4)))
+        # self.root.resizable(False,False)
+        # self.root.config(background="white")
+
+
+
+    def set_frame(self,):
+        systems=list(commands.keys())
+        self.system.set("Windows")
+
+        ttk.Label(self.frame,text="System").place(relx=.02,rely=.02)
+        ttk.Combobox(self.frame,values=systems,textvariable=self.system,width=10,state="readonly").place(relx=.2,rely=.02)
+
+        x ,y= .02,.2
+        ttk.Label(self.frame,text="Day",).place(relx=x,rely=y)
+        ttk.Entry(self.frame,textvariable=self.day,width=8,).place(relx=x+.2,rely=y)
+        ttk.Label(self.frame, text="Hour", ).place(relx=x, rely=y+.2)
+        ttk.Entry(self.frame, textvariable=self.hour, width=8, ).place(relx=x + .2, rely=y+.2)
+        ttk.Label(self.frame, text="Min", ).place(relx=x, rely=y+.4)
+        ttk.Entry(self.frame, textvariable=self.min, width=8, ).place(relx=x + .2, rely=y+.4)
+        ttk.Label(self.frame, text="Second", ).place(relx=x, rely=y+.6)
+        ttk.Entry(self.frame, textvariable=self.sec, width=8, ).place(relx=x + .2, rely=y+.6)
+
+        ttk.Button(self.frame,text="Start",command=lambda :threading.Thread(target=self.shutdown,daemon=True).start()).place(relx=.6,rely=.5)
+        ttk.Button(self.frame,text="Cancel",command=self.cancel).place(relx=.6,rely=.7)
+
+        self.countdown=tk.Label(self.frame,text="NA",font=("微软雅黑",16))
+        self.countdown.place(relx=.6,rely=.1)
+
+        self.frame.place(x=50,y=20,height=240,width=380)
+
+
+    def shutdown(self):
+        total = self.day.get() * 24 * 60 ** 2 + self.hour.get() * 60 ** 2 + self.min.get() * 60 + self.sec.get()
+        isconfirm=messagebox.askyesno("Confirm","Do you want to shutdown your system in {} second(s)".format(total))
+        print(isconfirm)
+        if not isconfirm:
+            return
+        self.isstart=True
+        for i in range(total):
+            if not self.isstart:
+                return
+            self.countdown.config(text="{:.4f}%\n{}/{}".format(i/total*100,i,total))
+            print("{:.4f}%\t{}/{}".format(i/total*100,i,total),self.isstart)
+            time.sleep(1)
+        # 执行关机
+        os.system(commands.get(self.system.get()))
+
+
+    def cancel(self):
+        self.isstart=False
+        self.countdown.config(text="NA")
+        print("Canceled")
+
+
+
+if __name__ == '__main__':
+    window_a=A("Window")
+~~~
+请看效果：
+
+![](image.png)
