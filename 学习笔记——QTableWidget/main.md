@@ -1,3 +1,5 @@
+[原文](https://github.com/Pfolg/PfolgBlog/blob/master/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94QTableWidget/main.md)
+
 # 什么是QTableWidget
 这就是QTableWidget：
 ~~~Python
