@@ -6,6 +6,7 @@
 ### QkStart -> Quick Tray
 更改[QkStart](https://github.com/Pfolg/QkStart)为Quick Tray，目前还没有开源的想法（主要是没人用），还没有设计UI的想法
 ![](image.png)
+
 迭代了很多版本，各版本之间不兼容
 
 ![alt text](image-1.png)
@@ -26,9 +27,11 @@
 借助AutoHotKey实现Ubuntu的终端热键——Ctrl+Alt+T
 
 ![alt text](image-4.png)
+
 脚本
 
 ![alt text](image-5.png)
+
 Cmder
 
 主要是用Cmder比美化Cmd来得快一点
@@ -41,6 +44,8 @@ Cmder
 由于电脑配置太烂，不敢下太大的模型，DeepSeek本地部署就算了，那是玩具，还是的搞点合适的。
 
 ### whisper
+
+https://github.com/openai/whisper
 
 ![alt text](image-7.png)
 
