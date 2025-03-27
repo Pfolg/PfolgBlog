@@ -73,7 +73,7 @@ with open(directory,"w",encoding="utf-8") as file:
 msg=""
 with open(directory,"a",encoding="utf-8") as file:
     for i in passages_infor.keys():
-        file.write(f"### {i}\n\n**创建时间：{passages_infor.get(i).get('time')}**\n\n")
+        file.write(f"### {i}\n\n**创建时间：** {passages_infor.get(i).get('time')}\n\n")
         psg=passages_infor.get(i).get("psg")
         for j in psg:
             title=j.replace('/','.').split('.')[-2]
