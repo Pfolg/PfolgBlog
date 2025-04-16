@@ -12,13 +12,14 @@
 ### windows时钟
 
 #### turtle
+
 猴子网站上的垃圾终究是垃圾：
 
 ![alt text](image.png)
 
 帅吧，但是不实用，我承认这个代码作者的厉害，但是不实用（于我而言），代码附上，是从CSDN来的，链接没记，见谅！
 
-~~~Python
+```Python
 import turtle
 from datetime import *
 
@@ -32,13 +33,13 @@ def Skip(step):
 
 def drawCircle(content, content_len, init_data, init_data_type, circle_radius, circle_radius_step, color, font_size):
     '''
-	content:传入的数组，代表要画的圆上面写的内容，比如1-12月
-	content_len：数组长度，用这个元素来做循环，便于调整每次的偏置角度
-	init_data： x轴正方向显示当前时间，这个数据就是当前时间
-	init_data_type:代表这个是什么类型的，时，分，秒之类的
-	circle_radius：圆的半径
-	circle_radius_step： 圆环上的数据根据半径和这个长度结合写上内容
-	color： 画笔颜色
+    content:传入的数组，代表要画的圆上面写的内容，比如1-12月
+    content_len：数组长度，用这个元素来做循环，便于调整每次的偏置角度
+    init_data： x轴正方向显示当前时间，这个数据就是当前时间
+    init_data_type:代表这个是什么类型的，时，分，秒之类的
+    circle_radius：圆的半径
+    circle_radius_step： 圆环上的数据根据半径和这个长度结合写上内容
+    color： 画笔颜色
     '''
     # turtle.pos()
     turtle.home()
@@ -165,7 +166,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-~~~
+```
 
 #### PySide6
 
@@ -175,7 +176,7 @@ if __name__ == "__main__":
 
 代码附上：
 
-~~~Python
+```Python
 # -*- coding: UTF-8 -*-
 """
 PROJECT_NAME Python_projects
@@ -267,7 +268,7 @@ class RainbowLabel(QLabel):
                 color: rgba({r}, {g}, {b}, {a});
                 background-color: transparent;
                 border-radius: 100px;
-                
+
             }}
         """)  # font-size: 24px;
 
@@ -342,15 +343,16 @@ if __name__ == '__main__':
     set_tray(tray)
     tray.show()
     sys.exit(app.exec())
-~~~
+```
 
 取消下面的代码注释可以应用彩虹渐变
-~~~
+
+```
 # 彩虹变色线程
 # self.timer1 = QTimer(self)
 # self.timer1.timeout.connect(self.update_color)
 # self.timer1.start(80)  # 1000/80 FPS
-~~~
+```
 
 主要是作为桌面挂件而设计。
 
@@ -364,7 +366,7 @@ if __name__ == '__main__':
 
 代码附上：
 
-~~~Python
+```Python
 # -*- coding: UTF-8 -*-
 """
 PROJECT_NAME Python_projects
@@ -692,25 +694,30 @@ if __name__ == "__main__":
     ui = None
     window = LockScreen()
     sys.exit(app.exec()) 
-~~~
+```
+
 更改下面的代码以实现密保问题的更改：
-~~~
+
+```
 if spinBox.value() == 114514 and lineEdit.text() == "Pfolg" and lineEdit2.text() == "PgBox":
             r1, r2 = QInputDialog.getText(ui, "Set Password", "Enter New Password")
-~~~
+```
+
 这里修改图片什么的：
-~~~Python
+
+```Python
     png1 = r"simple.png"
     png2 = r"c324fa8a880411ebb6edd017c2d2eca2.jpg"
     png3 = r"windows.png"
-~~~
+```
+
 ui文件我放[这里](re_pwd.ui)了，如果没用请到这篇文章所在的仓库位置找，当然，自己画也要不了多久：
 
 ![alt text](image-3.png)
 
 或者，复制：
 
-~~~html
+```html
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Form</class>
@@ -909,7 +916,7 @@ ui文件我放[这里](re_pwd.ui)了，如果没用请到这篇文章所在的�
  <resources/>
  <connections/>
 </ui>
-~~~
+```
 
 ### 最后
 
