@@ -11,11 +11,21 @@
 
 # 阅读方法
 
-[查看目录](directory.md)
+<span style="font-size:24px;font-weight:bold">[查看目录](directory.md)</span>
 
 2024年12月26日之前的且没有整理的文章，我放到了 [2024年12月26日前] 这个文件夹内。为了方便管理，以后每一个文件夹都是一篇博客，.md文件是文章，其他的是附带资料，如图片什么的。
 
 下载的文章我首推[marktext](https://github.com/marktext/marktext)来阅读，其次是vscode+插件。
+# 下载
+
++ 克隆本仓库到本地（不推荐）；
+
++ 若要下载单个文件夹，复制该文件夹的网址，粘贴入[DownGit](https://downgit.github.io/#/home)中，选择download即可。
++ 或者选择特定的文章再在页面上利用GitHub的下载功能。
+
+# 投稿
+
+~~目前应该只有我一个人写文章，暂时不考虑，其实可以提Issue或PR，也可以私信我。~~
 
 # 关于版权
 
