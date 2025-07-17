@@ -1,8 +1,8 @@
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Pfolg&show_icons=true&theme=vue)
 
+<!-- [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Pfolg)](https://github.com/anuraghazra/github-readme-stats)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Pfolg)](https://github.com/anuraghazra/github-readme-stats)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Pfolg&show_icons=true&theme=vue) -->
 
 
 # Blog简介
@@ -11,7 +11,7 @@
 
 # 阅读方法
 
-<span style="font-size:24px;font-weight:bold">[查看目录](directory.md)</span>
+**[查看目录](directory.md)**
 
 2024年12月26日之前的且没有整理的文章，我放到了 [2024年12月26日前] 这个文件夹内。为了方便管理，以后每一个文件夹都是一篇博客，.md文件是文章，其他的是附带资料，如图片什么的。
 
