@@ -39,7 +39,7 @@
 使用以下命令配置环境，我强烈推荐使用虚拟环境运行
 
 ```shell
-python install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 使用以下命令启动主程序
