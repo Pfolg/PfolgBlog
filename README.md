@@ -7,7 +7,7 @@
 >[!NOTE]
 >2025年8月
 >
->我已经建立了自己的博客网站，您可以前往 https://pfolg.top/ 访问我的博客
+>我已经建立了自己的博客网站，您可以前往 https://pfolg.top/ 或者 https://fuwari-cu5.pages.dev/ 访问我的博客
 
 # Blog简介
 
